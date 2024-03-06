@@ -1,0 +1,28 @@
+.navbar {
+  width: 100%;
+  background-color: #000000; /* Темно-серый цвет фона */
+  overflow: hidden;
+
+  &-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  li {
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  }
+}

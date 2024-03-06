@@ -1,0 +1,68 @@
+$blackColor: #000000;
+.container{
+  background-color: $blackColor;
+}
+.header_container{
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  margin-top: 47px;
+  color: #dddddd;
+  margin-left: 149px;
+  margin-right: 150px;
+}
+
+.interactive_container{
+  width: 751px;
+  height: 584px;
+  top: 107px;
+  left: 149px;
+  border-radius: 43px;
+  background-color: #131313;
+  position: relative;
+  img {
+    position: absolute;
+    width: 513px;
+    height: 513px;
+    margin-left: 124px;
+    margin-top: 35px;
+    z-index: 1;
+
+  }
+  h1 {
+    z-index: 2;
+    margin-top: 53px;
+    margin-left: 39px;
+    margin-right: 28px;
+    color: gray;
+    font-size: 54px;
+
+    strong {
+      color: white;
+    }
+  }
+
+  .btn {
+    padding: 10px 20px; // Определите подходящий отступ
+    margin: 5px; // Добавляем немного внешнего отступа между кнопками
+    border: none;
+    cursor: pointer; // Курсор в виде указателя
+    color: white;
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    background-color: #007bff; // Примерный цвет для кнопки
+  }
+
+  .btn-secondary {
+    background-color: #6c757d; // Примерный цвет для второй кнопки
+  }
+}
+.interactive_content{
+  width: 644px;
+  margin-left: 39px;
+  margin-top: 54px;
+  position: absolute;
+}
