@@ -12,12 +12,16 @@ const MainPage = () => {
                     <img src={union} alt="Интерактивный Фон"/>
                     <div className={style.interactive_content}>
                         <h1>Поможем <strong>поступить</strong> в вуз мечты <strong>за границей</strong></h1>
+                        <div className={style.buttons}>
+                            <button>123</button>
+                            <button>321</button>
+                        </div>
                     </div>
 
 
                 </div>
                 <div>
-                123
+                    123
                 </div>
             </div>
         </div>

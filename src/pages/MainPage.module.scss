@@ -1,8 +1,9 @@
 $blackColor: #000000;
-.container{
+.container {
   background-color: $blackColor;
 }
-.header_container{
+
+.header_container {
   display: flex;
   justify-content: space-between;
   width: auto;
@@ -13,24 +14,24 @@ $blackColor: #000000;
   margin-right: 150px;
 }
 
-.interactive_container{
+.interactive_container {
   width: 751px;
   height: 584px;
   left: 149px;
   border-radius: 43px;
   background-color: #131313;
   position: relative;
+
   img {
     position: absolute;
     width: 513px;
     height: 513px;
     margin-left: 124px;
     margin-top: 35px;
-    z-index: 1;
 
   }
+
   h1 {
-    z-index: 2;
     margin-top: 53px;
     margin-left: 39px;
     margin-right: 28px;
@@ -42,14 +43,27 @@ $blackColor: #000000;
     }
   }
 
-  .btn {
-    padding: 10px 20px; // Определите подходящий отступ
-    margin: 5px; // Добавляем немного внешнего отступа между кнопками
-    border: none;
-    cursor: pointer; // Курсор в виде указателя
-    color: white;
-    font-weight: bold;
-  }
+
+}
+
+.interactive_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 644px;
+  position: relative;
+  height: 100%;
+}
+
+.interactive_content .buttons {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  display: flex;
+
 
   .btn-primary {
     background-color: #007bff; // Примерный цвет для кнопки
@@ -58,10 +72,4 @@ $blackColor: #000000;
   .btn-secondary {
     background-color: #6c757d; // Примерный цвет для второй кнопки
   }
-}
-.interactive_content{
-  width: 644px;
-  margin-left: 39px;
-  margin-top: 54px;
-  position: absolute;
 }
