@@ -1,6 +1,7 @@
 $blackColor: #000000;
 .container {
   background-color: $blackColor;
+  height: 100%;
 }
 
 .header_container {
@@ -10,25 +11,28 @@ $blackColor: #000000;
   height: auto;
   margin-top: 47px;
   color: #dddddd;
-  margin-left: 149px;
-  margin-right: 150px;
+}
+
+.header_div {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .interactive_container {
-  width: 751px;
+  min-width: 644px;
+  width: 60%;
   height: 584px;
-  left: 149px;
   border-radius: 43px;
   background-color: #131313;
   position: relative;
 
   img {
     position: absolute;
-    width: 513px;
-    height: 513px;
-    margin-left: 124px;
-    margin-top: 35px;
-
+    max-width: 513px;
+    max-height: 513px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   h1 {
@@ -57,19 +61,214 @@ $blackColor: #000000;
 
 .interactive_content .buttons {
   padding: 10px 20px;
-  margin: 5px;
   border: none;
   cursor: pointer;
   color: white;
   font-weight: bold;
   display: flex;
+  justify-content: space-between;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 3%;
+}
+
+.btn_submit_app {
+  width: 60%;
+  height: 120%;
+  position: relative;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 5%;
+  cursor: pointer;
+  overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
+  background: linear-gradient(270deg, #4FCE91, #8532FF); /* Почти не видно, так как псевдоэлемент его перекрывает */
+  z-index: 1; /* Удостоверимся, что текст кнопки находится поверх псевдоэлементов */
+}
+
+.btn_submit_app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #4FCE91, #8532FF); /* Измененный градиент при наведении */
+  border-radius: 50px;
+  transition: opacity 1s; /* Плавное изменение прозрачности */
+  opacity: 0; /* Начальная прозрачность */
+  z-index: -1; /* Псевдоэлемент находится под текстом */
+}
+
+.btn_submit_app:hover::before {
+  opacity: 1; /* При наведении псевдоэлемент становится видимым */
+}
+
+.btn_more_info {
+  margin-left: 5%;
+  width: 60%;
+  height: 120%;
+  position: relative;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
+  background-color: rgba(255, 255, 255, 0.15);
+  z-index: 1; /* Удостоверимся, что текст кнопки находится поверх псевдоэлементов */
+  transition: all 1s;
+}
+
+.btn_more_info:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
 
 
-  .btn-primary {
-    background-color: #007bff; // Примерный цвет для кнопки
+.second_div {
+  width: 30%;
+  min-height: 100%;
+  border-radius: 43px;
+  background-color: #131313;
+  position: relative;
+}
+
+.information {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  height: 30%;
+  transform: translateX(-50%);
+  width: 70%; // Изменены размеры
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column; // Чтобы элементы шли вертикально
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text {
+  color: #fff;
+  font-size: 14px;
+  text-align: center; // Выровнять текст по центру
+}
+
+.next {
+  background-color: transparent;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Обводка шириной в 1px */
+}
+
+.cards_container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+
+.card {
+  background: #FFFFFF; /* Цвет фона для карточки */
+  border-radius: 10px; /* Скругление углов */
+  padding: 20px; /* Внутренние отступы */
+  width: 150px; /* Ширина карточки */
+  height: 100px; /* Высота карточки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень карточки */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px; /* Размер шрифта на карточке */
+  color: #333; /* Цвет шрифта на карточке */
+  margin: 0 10px; /* Отступы между карточками */
+}
+
+/* Вы можете добавить медиа-запросы, чтобы адаптировать карточки под мобильные устройства */
+@media (max-width: 600px) {
+  .cards_container {
+    flex-direction: column;
   }
 
-  .btn-secondary {
-    background-color: #6c757d; // Примерный цвет для второй кнопки
+  .card {
+    width: 100%; /* Ширина карточки на мобильном */
+    margin-bottom: 10px; /* Отступ снизу на мобильном */
   }
+}
+
+.cards_container .card:first-child {
+  margin-left: 0;
+}
+
+.cards_container .card:last-child {
+  margin-right: 0;
+}
+
+.workin_with {
+  color: wheat;
+  font-size: 30px;
+  text-align: center;
+}
+
+.with_gap {
+  gap: 3%;
+}
+
+.with_inline {
+  width: 80%;
+  height: 317px;
+  margin-top: 3%;
+  background-color: #dddddd;
+  border-radius: 33px;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: space-between;
+}
+
+.bakalavr {
+  width: 65%;
+  border-radius: 33px;
+  background-color: #61dafb;
+}
+
+.student {
+  width: 30%;
+  border-radius: 33px;
+  background-color: aliceblue;
+}
+
+.card_helpfull {
+  width: 30%;
+  background-color: #61dafb;
+  border-radius: 33px;
+}
+
+.advantages_cards {
+  margin: 5%;
+  width: 90%;
+}
+
+.advantages {
+  height: 517px;
+  border-radius: 43px;
+  background-color: #6c757d;
+}
+
+.stage {
+  height: 717px;
+  border-radius: 43px;
+  background-color: green;
+}
+
+.risks {
+  height: 730px;
+  border-radius: 43px;
+  background-color: gainsboro;
 }
