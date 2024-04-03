@@ -10,7 +10,7 @@
 
   &-brand {
     margin-top: 5%;
-    padding-left: 20px; // Отступ слева для логотипа/бренда
+    padding-left: 2%;
   }
 
   &-nav {
@@ -64,6 +64,8 @@
   position: relative;
   border: none;
   border-radius: 50px;
+  max-width: 200px;
+  min-width: 20%;
   color: white;
   padding: 10px 20px;
   margin-right: 20px;

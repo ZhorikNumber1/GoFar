@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './../components/NavBar/Navbar'; // Проверьте путь импорта
+import Navbar from './../components/NavBar/Navbar';
 import style from "./MainPage.module.scss";
 import union from "./../images/Union.png"
 
@@ -25,8 +25,8 @@ const MainPage = () => {
                         <img src="путь_к_изображению" alt="Описание изображения"/>
                         <div className={style.information}>
                             <p className={style.text}>Помогаем поступить в вузы:</p>
-                            <a href="#" className={style.next}>&#8250;</a>                            <p
-                            className={style.text}>Австрия</p>
+                            <a href="#" className={style.next}>&#8250;</a>
+                            <p className={style.text}>Австрия</p>
                             <button className={style.button}>123</button>
                         </div>
                     </div>

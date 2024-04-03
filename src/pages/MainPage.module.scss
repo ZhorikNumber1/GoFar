@@ -80,7 +80,7 @@ $blackColor: #000000;
   border-radius: 50px;
   color: white;
   padding: 10px 20px;
-  margin-right: 5%;
+  margin-right: 8%;
   cursor: pointer;
   overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
   background: linear-gradient(270deg, #4FCE91, #8532FF); /* Почти не видно, так как псевдоэлемент его перекрывает */
@@ -106,7 +106,7 @@ $blackColor: #000000;
 }
 
 .btn_more_info {
-  margin-left: 5%;
+  margin-left: 8%;
   width: 60%;
   height: 120%;
   position: relative;
@@ -114,7 +114,6 @@ $blackColor: #000000;
   border-radius: 50px;
   color: white;
   padding: 10px 20px;
-  margin-right: 20px;
   cursor: pointer;
   overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
   background-color: rgba(255, 255, 255, 0.15);
