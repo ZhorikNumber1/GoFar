@@ -8,6 +8,7 @@ import massage from './../images/message-tick.png'
 import money from './../images/moneys.png'
 import profile from './../images/profile-tick.png'
 import ticket from './../images/ticket-star.png'
+import bakalavr_human from './../images/bakalavr_human.png'
 const MainPage = () => {
     return (
         <div className={style.container}>
@@ -37,22 +38,29 @@ const MainPage = () => {
                     </div>
                 </div>
                 <div className={style.cards_container}>
-                    <div className={style.card}><img></img>Бесплатное обучение</div>
-                    <div className={style.card}>Возможность по расчету</div>
-                    <div className={style.card}>Без ограничений по возрасту</div>
-                    <div className={style.card}>Обучение на английском</div>
-                    <div className={style.card}>Консультация экспертов GoFar</div>
-                    <div className={style.card}>Планове сопровождание</div>
+                    <div className={style.card}><img src={ticket} className={style.card_img}/>Бесплатное обучение</div>
+                    <div className={style.card}><img src={money} className={style.card_img}/>Возможность по расчету</div>
+                    <div className={style.card}><img src={profile} className={style.card_img}/>Без ограничений по возрасту</div>
+                    <div className={style.card}><img src={book} className={style.card_img}/>Обучение на английском</div>
+                    <div className={style.card}><img src={massage} className={style.card_img}/>Консультация экспертов GoFar</div>
+                    <div className={style.card}><img src={award} className={style.card_img}/>Планове сопровождение</div>
                 </div>
+
             </div>
             <div className={style.workin_with}>
-                <div>
-                    С кем мы работаем
+                <div className={style.header_text_working_with}>
+                    <h1>С кем мы <strong>работаем</strong></h1>
                 </div>
                 <div className={style.with_gap}>
                     <div className={style.with_inline}>
                         <div className={style.bakalavr}>
-                            1
+                            <div className={style.bakalavr_text}>
+                                <h1>Ты <strong>заканчиваешь школу / колледж
+                                </strong> и хочешь <strong>поступить на бакалавриат</strong></h1>
+                            </div>
+                            <div className={style.bakalavr_img}>
+                                <img src={bakalavr_human}></img>
+                            </div>
                         </div>
                         <div className={style.student}>
                             2

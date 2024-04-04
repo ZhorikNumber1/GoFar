@@ -182,13 +182,20 @@ $blackColor: #000000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень карточки */
   display: flex;
   justify-content: center;
+  position: relative;
   align-items: center;
   text-align: center;
   font-size: 14px; /* Размер шрифта на карточке */
   color: #333; /* Цвет шрифта на карточке */
   margin: 0 10px; /* Отступы между карточками */
 }
-
+.card_img {
+  position: absolute; /* Позиционируем изображение абсолютно относительно его родителя с классом .card */
+  top: 10px; /* Отступ сверху */
+  left: 10px; /* Отступ справа */
+  width: 20px; /* Примерная ширина изображения */
+  height: 20px; /* Примерная высота изображения */
+}
 /* Вы можете добавить медиа-запросы, чтобы адаптировать карточки под мобильные устройства */
 @media (max-width: 600px) {
   .cards_container {
@@ -210,15 +217,37 @@ $blackColor: #000000;
 }
 
 .workin_with {
-  color: wheat;
+
   font-size: 30px;
   text-align: center;
 }
+.header_text_working_with{
+  color: gray;
+  font-size: 42px;
 
+  strong {
+    color: white;
+  }
+}
 .with_gap {
   gap: 3%;
 }
-
+.bakalavr_text{
+  color: rgba(128, 128, 128, 0.8);
+  font-size: 15px;
+  margin-left: 2%;
+  width: 50%;
+  height: 55%;
+  strong {
+    color: white;
+  }
+}
+.bakalavr_img{
+  position: relative;
+  img {
+    margin-top: 17px;
+  }
+}
 .with_inline {
   width: 80%;
   height: 317px;
@@ -234,7 +263,12 @@ $blackColor: #000000;
 .bakalavr {
   width: 65%;
   border-radius: 33px;
-  background-color: #61dafb;
+  background-color: #8532FF;
+  display: flex;
+  flex-direction: row;
+  line-height: 41px;
+  text-align: left;
+  min-width: 523px;
 }
 
 .student {
