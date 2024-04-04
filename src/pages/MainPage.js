@@ -2,7 +2,12 @@ import React from 'react';
 import Navbar from './../components/NavBar/Navbar';
 import style from "./MainPage.module.scss";
 import union from "./../images/Union.png"
-
+import award from './../images/award.png'
+import book from './../images/book.png'
+import massage from './../images/message-tick.png'
+import money from './../images/moneys.png'
+import profile from './../images/profile-tick.png'
+import ticket from './../images/ticket-star.png'
 const MainPage = () => {
     return (
         <div className={style.container}>
@@ -32,7 +37,7 @@ const MainPage = () => {
                     </div>
                 </div>
                 <div className={style.cards_container}>
-                    <div className={style.card}>Бесплатное обучение</div>
+                    <div className={style.card}><img></img>Бесплатное обучение</div>
                     <div className={style.card}>Возможность по расчету</div>
                     <div className={style.card}>Без ограничений по возрасту</div>
                     <div className={style.card}>Обучение на английском</div>
