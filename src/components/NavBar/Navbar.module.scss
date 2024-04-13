@@ -1,0 +1,117 @@
+@keyframes slideInFromUp {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.slideInFromUp {
+  animation: slideInFromUp 1s ease-out forwards;
+}
+
+
+
+.navbar {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: black; // Цвет фона обновлен на черный
+  overflow: hidden;
+  display: flex; // Элементы теперь flex-контейнеры
+  align-items: center; // Выровнено по центру по вертикали
+  justify-content: space-between; // Пространство между элементами распределено равномерно
+
+  &-brand {
+    margin-top: 5%;
+    padding-left: 2%;
+  }
+
+  &-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; // Навигационные элементы теперь flex-контейнеры
+    justify-content: center; // Центрирование
+
+    li {
+      a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 25px; // Подгонка размера отступа
+        text-decoration: none;
+        transition: background-color 0.3s, border-radius 0.3s; // Эффективный переход для фона и скругления углов
+
+        &:hover {
+          background-color: #131313; // Цвет при наведении изменен на темно-серый
+          border-radius: 10%; // Делаем фон круглым при наведении
+          // Уменьшаем размер внутреннего отступа для поддержания размеров элемента
+        }
+      }
+    }
+  }
+}
+
+.div_buttons {
+}
+
+.button_school {
+  position: relative;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
+  background-color: rgba(255, 255, 255, 0.15);
+  z-index: 1; /* Удостоверимся, что текст кнопки находится поверх псевдоэлементов */
+  transition: all 1s;
+}
+
+.button_school:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.button_cons {
+  position: relative;
+  border: none;
+  border-radius: 50px;
+  max-width: 200px;
+  min-width: 20%;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
+  background: linear-gradient(270deg, #4FCE91, #8532FF); /* Почти не видно, так как псевдоэлемент его перекрывает */
+  z-index: 1; /* Удостоверимся, что текст кнопки находится поверх псевдоэлементов */
+}
+
+.button_cons::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #4FCE91, #8532FF); /* Измененный градиент при наведении */
+  border-radius: 50px;
+  transition: opacity 1s; /* Плавное изменение прозрачности */
+  opacity: 0; /* Начальная прозрачность */
+  z-index: -1; /* Псевдоэлемент находится под текстом */
+}
+
+.button_cons:hover::before {
+  opacity: 1; /* При наведении псевдоэлемент становится видимым */
+}
+
+
+.icon {
+  margin-top: -40%;
+}
+

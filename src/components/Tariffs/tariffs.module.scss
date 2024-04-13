@@ -1,0 +1,31 @@
+/* Tariffs.module.css */
+.container_tarrifs {
+  text-align: center;
+  margin: 20px;
+  height: 730px;
+  width: 100%;
+  background-color: #4FCE91;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.th {
+  border-bottom: 2px solid #ddd;
+}
+
+.td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+}
+
+.button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}

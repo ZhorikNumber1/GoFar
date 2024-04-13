@@ -1,0 +1,522 @@
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.slideInFromLeft {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+
+
+$blackColor: #000000;
+.container {
+  background-color: $blackColor;
+  height: 100%;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  margin-top: 47px;
+  color: #dddddd;
+}
+
+.header_div {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.interactive_container {
+  min-width: 644px;
+  width: 60%;
+  height: 584px;
+  border-radius: 43px;
+  background-color: #131313;
+  position: relative;
+
+  img {
+    position: absolute;
+    max-width: 513px;
+    max-height: 513px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    margin-top: 53px;
+    margin-left: 39px;
+    margin-right: 28px;
+    color: gray;
+    font-size: 54px;
+
+    strong {
+      color: white;
+    }
+  }
+
+
+}
+
+.interactive_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 644px;
+  position: relative;
+  height: 100%;
+}
+
+.interactive_content .buttons {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 3%;
+}
+
+.btn_submit_app {
+  width: 60%;
+  height: 120%;
+  position: relative;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 8%;
+  cursor: pointer;
+  overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
+  background: linear-gradient(270deg, #4FCE91, #8532FF); /* Почти не видно, так как псевдоэлемент его перекрывает */
+  z-index: 1; /* Удостоверимся, что текст кнопки находится поверх псевдоэлементов */
+}
+
+.btn_submit_app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #4FCE91, #8532FF); /* Измененный градиент при наведении */
+  border-radius: 50px;
+  transition: opacity 1s; /* Плавное изменение прозрачности */
+  opacity: 0; /* Начальная прозрачность */
+  z-index: -1; /* Псевдоэлемент находится под текстом */
+}
+
+.btn_submit_app:hover::before {
+  opacity: 1; /* При наведении псевдоэлемент становится видимым */
+}
+
+.btn_more_info {
+  margin-left: 8%;
+  width: 60%;
+  height: 120%;
+  position: relative;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
+  background-color: rgba(255, 255, 255, 0.15);
+  z-index: 1; /* Удостоверимся, что текст кнопки находится поверх псевдоэлементов */
+  transition: all 1s;
+}
+
+.btn_more_info:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+.second_div {
+  width: 30%;
+  min-height: 100%;
+  border-radius: 43px;
+  background-color: #131313;
+  position: relative;
+}
+
+.information {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  height: 30%;
+  transform: translateX(-50%);
+  width: 70%; // Изменены размеры
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column; // Чтобы элементы шли вертикально
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text {
+  color: #fff;
+  font-size: 14px;
+  text-align: center; // Выровнять текст по центру
+}
+
+.next {
+  background-color: transparent;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Обводка шириной в 1px */
+}
+
+.cards_container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+
+.card {
+  background: #FFFFFF; /* Цвет фона для карточки */
+  border-radius: 10px; /* Скругление углов */
+  padding: 20px; /* Внутренние отступы */
+  width: 150px; /* Ширина карточки */
+  height: 100px; /* Высота карточки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень карточки */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  font-size: 14px; /* Размер шрифта на карточке */
+  color: #333; /* Цвет шрифта на карточке */
+  margin: 0 10px; /* Отступы между карточками */
+  transition: all 1s; /* Плавный переход */
+  overflow: hidden; /* Скрыть содержимое за пределами границ */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -3px; /* Сдвигаем чуть выше, чтобы создать эффект тени */
+  left: -3px; /* Сдвигаем чуть влево, чтобы создать эффект тени */
+  width: calc(100% + 6px); /* Растягиваем больше размера карточки, чтобы создать эффект тени */
+  height: calc(100% + 6px); /* Тоже самое для высоты */
+  background: linear-gradient(270deg, #4FCE91, #8532FF);
+  z-index: -1; /* Чтобы псевдоэлемент был под основным контентом */
+  border-radius: 13px; /* Скругление углов немного больше основной карточки */
+  opacity: 0; /* Сначала делаем его полностью прозрачным */
+  transition: opacity 1s; /* Плавный переход только для прозрачности */
+}
+
+.card:hover::before {
+  opacity: 1; /* При наведении делаем псевдоэлемент видимым */
+}
+
+.card:hover {
+  background: linear-gradient(270deg, #4FCE91, #8532FF);
+  color: white; /* Цвет текста при наведении */
+}
+
+.card_img {
+  position: absolute; /* Позиционируем изображение абсолютно относительно его родителя с классом .card */
+  top: 10px; /* Отступ сверху */
+  left: 10px; /* Отступ справа */
+  width: 20px; /* Примерная ширина изображения */
+  height: 20px; /* Примерная высота изображения */
+}
+/* Вы можете добавить медиа-запросы, чтобы адаптировать карточки под мобильные устройства */
+@media (max-width: 600px) {
+  .cards_container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%; /* Ширина карточки на мобильном */
+    margin-bottom: 10px; /* Отступ снизу на мобильном */
+  }
+}
+
+.cards_container .card:first-child {
+  margin-left: 0;
+}
+
+.cards_container .card:last-child {
+  margin-right: 0;
+}
+
+.workin_with {
+
+  font-size: 30px;
+  text-align: center;
+}
+.header_text_working_with{
+  color: gray;
+  font-size: 42px;
+
+  strong {
+    color: white;
+  }
+}
+.with_gap {
+  gap: 3%;
+}
+.bakalavr_text{
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  margin-left: 2%;
+  width: 50%;
+  height: 55%;
+  strong {
+    color: white;
+  }
+}
+.bakalavr_img{
+  position: relative;
+  img {
+    margin-top: 17px;
+  }
+}
+.with_inline {
+  width: 80%;
+  height: 317px;
+  margin-top: 3%;
+  border-radius: 33px;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: space-between;
+}
+
+.bakalavr {
+  width: 65%;
+  border-radius: 33px;
+  background-color: #8532FF;
+  display: flex;
+  flex-direction: row;
+  line-height: 41px;
+  text-align: left;
+  min-width: 523px;
+}
+
+.student {
+  width: 30%;
+  border-radius: 33px;
+  background-color: #F83D40;
+  line-height: 41px;
+  text-align: left;
+  h1 {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 30px;
+    margin-left: 2%;
+    width: 80%;
+    strong {
+      color: white;
+    }
+  }
+}
+
+.card_helpfull_parents {
+  width: 30%;
+  border-radius: 33px;
+  background-color: #6CC6FB;
+  height: 100%;
+  line-height: 41px;
+  text-align: left;
+  h1 {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 30px;
+    margin-left: 2%;
+    width: 80%;
+    strong {
+      color: white;
+    }
+  }
+}
+.card_helpfull_maga{
+  width: 30%;
+  border-radius: 33px;
+  background-color: #4FCE91;
+  height: 100%;
+  line-height: 41px;
+  text-align: left;
+  h1 {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 30px;
+    margin-left: 2%;
+    width: 80%;
+    strong {
+      color: white;
+    }
+  }
+}
+.card_helpfull_anketa{
+  width: 30%;
+  border-radius: 33px;
+  height: 100%;
+  line-height: 41px;
+  text-align: left;
+  background: linear-gradient(138.89deg, rgba(79,206,145,0.42) -35.86%, rgba(79, 206, 145, 0) 60.8%);
+
+  h1 {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 30px;
+    margin-left: 2%;
+    width: 80%;
+    strong {
+      color: white;
+    }
+  }
+}
+
+.advantages_cards {
+  margin: 5%;
+  width: 90%;
+}
+
+.advantages {
+  height: 517px;
+  border-radius: 43px;
+  background-color: #ffffff;
+  .advantages_list {
+    display: flex;
+    justify-content: space-between; // Распределение блоков на странице
+    flex-direction: row;
+    padding-left: 8%;
+    width: 84%;
+
+    .advantage_item {
+      background: white;
+      border-radius: 20px; // Скругление углов
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Тень вокруг блоков
+      margin: 10px;
+      width: 20%;
+      padding: 20px;
+      padding-bottom: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: all 1s;
+
+      .img {
+        font-size: 2em;
+        width: 100%;
+        height: auto;
+      }
+
+      h2 {
+        margin-top: 25%;
+        font-size: 18px;
+        color: #131313;
+        font-weight: bold;
+        line-height: 22px;
+        text-align: left;
+        padding: 10px;
+        padding-bottom: 0;
+        /* Создание градиента для фона */
+      }
+      strong {
+        background: linear-gradient(101.89deg, #4FCE91 -17.01%, #8532FF 58.7%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Сделаем текст прозрачным, чтобы показать только градиент */
+        -webkit-text-fill-color: transparent;
+        color: transparent; /* Подстраховка для браузеров не поддерживающих вышеуказанные стили */
+      }
+
+
+    }
+    .advantage_item:hover{
+      background: #f3f3f3;
+    }
+  }
+}
+
+.stage {
+  height: 717px;
+  border-radius: 43px;
+  background-color: green;
+}
+
+.risks {
+  height: 730px;
+  border-radius: 43px;
+  background-color: gainsboro;
+}
+.label_adv{
+  padding-top: 50px;
+  padding-left: 8%;
+  width: 84%;
+  display: flex;
+  flex-direction: row;
+  line-height: 51.2px;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    color: rgba(114, 112, 112, 0.6);
+    font-size: 42px;
+    margin-left: 2%;
+    width: 35%;
+    strong {
+      color: #000000;
+    }
+  }
+  button {
+    box-shadow: 0px 22px 39.4px 0px rgba(119, 92, 226, 0.3);
+    position: relative;
+    border: none;
+    border-radius: 50px;
+    max-width: 262px;
+    width: 20%;
+    height: 60px;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
+    background: linear-gradient(270deg, #4FCE91, #8532FF); /* Почти не видно, так как псевдоэлемент его перекрывает */
+    z-index: 1; /* Удостоверимся, что текст кнопки находится поверх псевдоэлементов */
+  }
+
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #4FCE91, #8532FF); /* Измененный градиент при наведении */
+    border-radius: 50px;
+    transition: opacity 1s; /* Плавное изменение прозрачности */
+    opacity: 0; /* Начальная прозрачность */
+    z-index: -1; /* Псевдоэлемент находится под текстом */
+  }
+
+  button:hover::before {
+    opacity: 1; /* При наведении псевдоэлемент становится видимым */
+  }
+}
+.stepsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #1a1a1a; // Адаптируйте цвет фона под ваш дизайн
+  padding: 20px;
+  border-radius: 15px;
+  gap: 20px; // Обеспечиваем расстояние между элементами
+}

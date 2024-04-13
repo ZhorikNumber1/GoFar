@@ -1,0 +1,50 @@
+.step {
+  color: white; // Белый цвет текста
+  padding: 20px; // Внутренний отступ в компоненте
+  border-radius: 20px; // Скругление углов
+  position: relative; // Относительное позиционирование для псевдоэлементов и дочерних элементов
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // Выравнивание дочерних элементов по левому краю
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); // Тень компонента
+
+  .vector-background {
+    display: none; // фоновое изображение будет добавлено через CSS, не через img
+  }
+
+  .step-icon-wrapper {
+    background: linear-gradient(145deg, #6e5eff, #b745f5); // Градиент для фона иконки
+    padding: 10px; // Внутренний отступ вокруг иконки
+    border-radius: 10px; // Скругление углов обертки иконки
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; // Отступ до нижнего элемента
+  }
+
+  .step-icon {
+    width: 24px; /* Размер иконки */
+    height: 24px; /* Размер иконки */
+    margin: 16px; /* Отступы */
+    position: absolute; /* Абсолютное позиционирование внутри родительского блока с position: relative; */
+    top: 0;
+    left: 0;
+
+  }
+
+  .step-number {
+    position: absolute; // Абсолютное позиционирование для номера шага
+    top: 10px; // Отступ от верхнего края
+    right: 10px; // Отступ от правого края
+    font-size: 18px; // Размер шрифта номера шага
+    background: white; // Белый фон номера шага
+    color: black; // Черный цвет текста
+    padding: 5px 10px; // Внутренний отступ в контейнере номера шага
+    border-radius: 10px; // Скругление углов номера шага
+  }
+
+  .step-title {
+    font-size: 16px; // Размер шрифта заголовка
+    font-weight: bold; // Жирный шрифт
+  }
+}
