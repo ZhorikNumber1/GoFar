@@ -5,7 +5,7 @@ import icons from './../../images/icon.png'
 
 const Navbar = () => {
     return (
-        <nav className={styles.navbar}>
+        <nav className={`${styles.navbar} ${styles.slideInFromUp}`}>`
             <div className={styles["navbar-brand"]}>
                 <div className={styles.icon}>
                     <Link to="/"><img src={icons} alt="Logo"/></Link>
@@ -23,7 +23,6 @@ const Navbar = () => {
                 <button className={styles.button_cons}>Бесплатная консультация</button>
             </div>
         </nav>
-
     );
 };
 
