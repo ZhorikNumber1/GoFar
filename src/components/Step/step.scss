@@ -4,9 +4,11 @@
   border-radius: 20px; // Скругление углов
   position: relative; // Относительное позиционирование для псевдоэлементов и дочерних элементов
   display: flex;
+  height: 194px;
   flex-direction: column;
   align-items: flex-start; // Выравнивание дочерних элементов по левому краю
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); // Тень компонента
+  border: 1px solid rgba(54, 54, 54, 1);
 
   .vector-background {
     display: none; // фоновое изображение будет добавлено через CSS, не через img
@@ -37,14 +39,42 @@
     top: 10px; // Отступ от верхнего края
     right: 10px; // Отступ от правого края
     font-size: 18px; // Размер шрифта номера шага
-    background: white; // Белый фон номера шага
-    color: black; // Черный цвет текста
-    padding: 5px 10px; // Внутренний отступ в контейнере номера шага
-    border-radius: 10px; // Скругление углов номера шага
+    color: #ffffff; // Черный цвет текста
+    padding: 5px 7px; // Внутренний отступ в контейнере номера шага
+    border-radius: 50%; // Скругление углов номера шага
+    background: rgba(255, 255, 255, 0.14);
+
   }
 
   .step-title {
+    margin-bottom: -50px;
     font-size: 16px; // Размер шрифта заголовка
     font-weight: bold; // Жирный шрифт
   }
+}
+.step-connecting-line {
+  position: absolute;
+  left: 100%; /* Центрируем линию относительно шага */
+  bottom: 50%;
+  height: 2px; /* Регулируем высоту линии */
+  width: 20px; /* Толщина линии */
+  background: rgba(78, 78, 78, 1);
+
+}
+
+.step-connecting-line::after {
+  content: '';
+  position: absolute;
+  left: 16px; /* Смещаем круг на половину его ширины влево */
+  bottom: -4px;
+  width: 10px; /* Размер круга */
+  height: 10px; /* Размер круга */
+  border-radius: 50%;
+  background: rgba(78, 78, 78, 1);
+
+}
+
+/* Чтобы последний элемент не имел линию */
+.step:last-child .step-connecting-line {
+  display: none;
 }

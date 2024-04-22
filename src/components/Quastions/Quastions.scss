@@ -1,8 +1,24 @@
+.question_text{
+  text-align: center;
+  h1 {
+    margin-top: 53px;
+    margin-left: 39px;
+    margin-right: 28px;
+    color: gray;
+    font-size: 54px;
+
+    strong {
+      color: white;
+    }
+  }
+}
+
 .container_questions {
   display: flex;
   justify-content: center; // Центрируем содержимое
   align-items: start; // Выравнивание по верхней границе
-  padding: 24px;
+  margin-left: 10%;
+  width: 80%;
   color: #FFFFFF; // Белый текст
   gap: 20px; // Промежуток между блоками
 
@@ -22,11 +38,10 @@
       overflow: hidden;
 
       .question_toggle {
+        padding: 10px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
         span {
           font-size: 18px;
@@ -42,9 +57,8 @@
       }
 
       .question_content {
-        padding: 10px 20px;
-        transition: max-height 0.3s ease;
-        background: #333;
+        transition: all 0.3s ease;
+        background: #131313;
       }
     }
   }
@@ -57,19 +71,19 @@
     align-items: center;
     text-align: center;
     gap: 10px;
-    border-radius: 20px 0px 0px 0px;
+    border-radius: 20px;
     background: linear-gradient(101.89deg, rgba(79, 206, 145, 0.2) -17.01%, rgba(133, 50, 255, 0.2) 58.7%);
-    border: 1px solid;
-    border-image-source: linear-gradient(101.89deg, #4FCE91 -17.01%, #8532FF 58.7%);
+    border: 1px solid transparent;
     border-image-slice: 1;
-    margin-top: 20px;
-
+    overflow: hidden;
     p {
       color: rgba(255, 255, 255, 0.85);
       font-size: 16px;
     }
 
     button {
+      margin-top: 20px;
+      margin-bottom: 20px;
       padding: 10px 20px;
       border: none;
       border-radius: 10px;
@@ -77,10 +91,24 @@
       color: #fff;
       font-size: 16px;
       cursor: pointer;
-      
+
       &:hover {
         background-color: #856ff8;
       }
     }
+  }
+}
+.question_item.animate {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

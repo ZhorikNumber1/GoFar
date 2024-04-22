@@ -1,0 +1,75 @@
+.second_div {
+  width: 30%;
+  min-height: 100%;
+  border-radius: 43px;
+  background-color: #131313;
+  position: relative;
+  overflow: hidden; /* Добавлено, чтобы изображение не выходило за границы */
+}
+
+.information {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  border-radius: 20px;
+  background: rgba(49, 49, 49, 1);
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.next {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  text-decoration: none;
+  display: inline-block; /* остается неизменным */
+  padding: 8px; /* убедитесь, что это подходит */
+  width: 24px; /* установите фиксированный размер */
+  height: 24px; /* установите фиксированный размер */
+  cursor: pointer;
+  font-size: 20px; /* адаптация размера иконки */
+}
+
+.button {
+  background: rgba(0,0,0,0.5); /* полупрозрачный черный фон */
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+
+}
+
+.button:hover {
+  background-color: #555; /* изменение цвета при наведении */
+}
+
+.text {
+  color: #fff;
+  font-size: 16px; /* побольше текст */
+  padding-left: 10px; /* добавить паддинг слева */
+  padding-right: 20%;
+}
+.text_about_country{
+  display: flex;
+  justify-content: space-between;
+}
