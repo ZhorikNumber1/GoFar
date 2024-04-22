@@ -19,11 +19,11 @@
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  background-color: black; // Цвет фона обновлен на черный
+  background-color: black;
   overflow: hidden;
-  display: flex; // Элементы теперь flex-контейнеры
-  align-items: center; // Выровнено по центру по вертикали
-  justify-content: space-between; // Пространство между элементами распределено равномерно
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   &-brand {
     margin-top: 5%;
@@ -34,22 +34,21 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; // Навигационные элементы теперь flex-контейнеры
-    justify-content: center; // Центрирование
+    display: flex;
+    justify-content: center;
 
     li {
       a {
         display: block;
         color: white;
         text-align: center;
-        padding: 14px 25px; // Подгонка размера отступа
+        padding: 14px 25px;
         text-decoration: none;
-        transition: background-color 0.3s, border-radius 0.3s; // Эффективный переход для фона и скругления углов
+        transition: background-color 0.3s, border-radius 0.3s;
 
         &:hover {
-          background-color: #131313; // Цвет при наведении изменен на темно-серый
-          border-radius: 10%; // Делаем фон круглым при наведении
-          // Уменьшаем размер внутреннего отступа для поддержания размеров элемента
+          background-color: #131313;
+          border-radius: 10%;
         }
       }
     }
@@ -67,9 +66,9 @@
   padding: 10px 20px;
   margin-right: 20px;
   cursor: pointer;
-  overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
+  overflow: hidden;
   background-color: rgba(255, 255, 255, 0.15);
-  z-index: 1; /* Удостоверимся, что текст кнопки находится поверх псевдоэлементов */
+  z-index: 1;
   transition: all 1s;
 }
 
@@ -87,9 +86,9 @@
   padding: 10px 20px;
   margin-right: 20px;
   cursor: pointer;
-  overflow: hidden; /* Гарантируем, что псевдоэлементы не выходят за пределы кнопки */
-  background: linear-gradient(270deg, #4FCE91, #8532FF); /* Почти не видно, так как псевдоэлемент его перекрывает */
-  z-index: 1; /* Удостоверимся, что текст кнопки находится поверх псевдоэлементов */
+  overflow: hidden;
+  background: linear-gradient(270deg, #4FCE91, #8532FF);
+  z-index: 1;
 }
 
 .button_cons::before {
@@ -99,19 +98,64 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, #4FCE91, #8532FF); /* Измененный градиент при наведении */
+  background: linear-gradient(90deg, #4FCE91, #8532FF);
   border-radius: 50px;
-  transition: opacity 1s; /* Плавное изменение прозрачности */
-  opacity: 0; /* Начальная прозрачность */
-  z-index: -1; /* Псевдоэлемент находится под текстом */
+  transition: opacity 1s;
+  opacity: 0;
+  z-index: -1;
 }
 
 .button_cons:hover::before {
-  opacity: 1; /* При наведении псевдоэлемент становится видимым */
+  opacity: 1;
 }
 
 
 .icon {
   margin-top: -40%;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #ffffff;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: inherit;
+  min-width: 160px;
+  z-index: 1000;
+  left: 0;
+  top: 100%;
+}
+
+
+
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdownContent a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdownContent.active {
+  display: block;
 }
 

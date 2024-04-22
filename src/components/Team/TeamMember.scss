@@ -1,0 +1,80 @@
+.team-member {
+  position: relative;
+  cursor: pointer;
+  button {
+    background-color: #575757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+  }
+  button:hover {
+    background-color: #787878;
+  }
+
+
+}
+.team-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  color: #ffffff;
+  background: rgba(19, 19, 19, 1);
+
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+
+.team-member-image {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc; /* Пример, замените на фоновое изображение */
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member-image:hover {
+  transform: scale(1.2);
+}
+
+.popup {
+  position: fixed; /* Используйте fixed для позиционирования на весь экран */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  display: flex; /* Для центрирования содержимого попапа */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Значение должно быть достаточно высоким, чтобы быть наверху всего */
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 24px;
+}
+
+
+.popup-content {
+  max-width: 600px;
+  text-align: left;
+  color: white;
+  background-color: #2D2D2D;
+  position: relative; /* Для позиционирования кнопки закрыть относительно этого блока */
+  padding: 20px;
+  z-index: 1001; /* Значение должно быть выше, чем у .popup для корректного отображения */
+}
+
