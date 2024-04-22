@@ -1,5 +1,19 @@
-.container_politics{
-  background-color: #92199f;
-  height: 100vh;
-  width: 80vh;
+.container_politics {
+  display: flex; // Выровнять элементы горизонтально
+  align-items: center; // Центрировать элементы вертикально
+  justify-content: space-around; // Равномерно распределить пространство между элементами
+  color: #767676; // Белый цвет текста
+  background-color: black; // Черный фоновый цвет
+  padding: 10px; // Паддинг вокруг контейнера
+
+  div {
+    cursor: pointer; // Курсор в виде указателя
+    &:hover {
+      text-decoration: underline; // Подчеркивание при наведении
+    }
+  }
+}
+.INN_politics{
+  color: white;
+  
 }
